@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">HomathonFrontApp</string>
+    <string name="title_home">واجهة المريض</string>
+    <string name="title_dashboard">واجهة العيادة</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_clinic">أضف عيادة</string>
+    <string name="clinic_name">إسم العيادة</string>
+    <string name="clinic">عيادة</string>
+    <string name="clinic_details">تفاصيل اخرى</string>
+    <string name="clinic_starttime">وقت البداية</string>
+    <string name="clinic_estimated_time_mins">مدة الكشف (دقيقة)ـ</string>
+    <string name="clinic_pick_location_mins">وقع المكان على الخريطة</string>
+    <string name="pick_location">اختار الموقع</string>
+    <string name="latitude">دائرة عرض</string>
+    <string name="longitude">خط طول</string>
+    <string name="number_of_patients">عدد المرضي</string>
+    <string name="current_turn">الدور الحالي</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="connection_error">خطأ في الإتصال</string>
+    <string name="current_turn_2">الدور الحالي :</string>
+    <string name="delete">مسح</string>
+    <string name="Failure">حدث خطأ</string>
+    <string name="when_go_toClinic">متي أذهب للعيادة؟</string>
+    <string name="calculate">احسب</string>
+    <string name="ok">حسناً</string>
+    <string name="back">رجوع</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="dualtext"
+            type="hasan.mohamed.shehata.homathonfrontapp.ui.DualText" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/clinic_view_container"
+        android:background="@drawable/rv_item_background"
+        android:elevation="10dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/textview_padding"
+        android:layoutDirection="rtl">
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/navItemTextSize"
+            android:textColor="@color/newsTitleTextColor"
+            android:id="@+id/primary_text_tv"
+            android:text="@{dualtext.primaryText}"
+            android:fontFamily="@font/cairo"
+            android:layout_margin="@dimen/textview_padding"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/news_view_secondary_text_size"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/primary_text_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/secondary_text_tv"
+            android:fontFamily="@font/cairo"
+            android:layout_margin="@dimen/textview_padding"
+            android:text="@{dualtext.secondaryText}"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/news_view_secondary_text_size"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/secondary_text_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/turn_number_label_tv"
+            android:fontFamily="@font/cairo"
+            android:layout_margin="@dimen/textview_padding"
+            android:text="@string/current_turn_2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/news_view_secondary_text_size"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/secondary_text_tv"
+            app:layout_constraintStart_toEndOf="@+id/turn_number_label_tv"
+            android:id="@+id/turn_number_tv"
+            android:fontFamily="@font/cairo"
+            android:layout_margin="@dimen/textview_padding"
+            android:text="@{dualtext.number1}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/news_title_textSize"
+            android:textColor="@color/light"
+            android:text="@string/delete"
+            android:gravity="center"
+            android:fontFamily="@font/cairo"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/textview_padding"
+            android:layout_marginRight="@dimen/textview_padding"
+            android:layout_marginLeft="@dimen/textview_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/delete_clinic_but"
+            android:background="@drawable/button_background"
+            app:layout_constraintTop_toBottomOf="@+id/secondary_text_tv"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

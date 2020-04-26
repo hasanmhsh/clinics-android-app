@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="true"
+        android:id="@+id/map_activity_true_menu_item_id"
+        android:icon="@drawable/ic_true_white_24dp"
+        app:showAsAction="always" />
+    <item
+        android:title="false"
+        android:id="@+id/map_activity_false_menu_item_id"
+        android:icon="@drawable/ic_false_white_36dp"
+        app:showAsAction="always" />
+</menu>

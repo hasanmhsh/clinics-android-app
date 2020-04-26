@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="clinic"
+            type="hasan.mohamed.shehata.homathonfrontapp.pojo.Clinic" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_margin="@dimen/textview_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/textview_padding"
+            android:background="@drawable/rv_item_background_released"
+            android:layout_height="wrap_content">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/navTitleTextSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text="@string/when_go_toClinic"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_margin="@dimen/navItemTextSize"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/main_title_patient_id"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/news_title_textSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text="رقم المريض : "
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_margin="@dimen/textview_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/patient_turnnumber_label_tv"
+
+                app:layout_constraintTop_toTopOf="@+id/patient_turnnumber_label_et"
+                app:layout_constraintBottom_toBottomOf="@id/patient_turnnumber_label_et"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text=""
+                android:textSize="@dimen/news_title_textSize"
+                android:inputType="number"
+                android:singleLine="true"
+                android:id="@+id/patient_turnnumber_label_et"
+                app:layout_constraintTop_toBottomOf="@id/main_title_patient_id"
+                app:layout_constraintStart_toEndOf="@+id/patient_turnnumber_label_tv"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/news_title_textSize"
+                android:textColor="@color/light"
+                android:text="@string/clinic_pick_location_mins"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:padding="@dimen/textview_padding"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/patient_select_loc_on_map_id_but"
+                android:background="@drawable/button_background"
+                app:layout_constraintTop_toBottomOf="@+id/patient_turnnumber_label_et"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/news_title_textSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text="@string/latitude"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/patient_lat_label_id_tv"
+                app:layout_constraintTop_toBottomOf="@+id/patient_select_loc_on_map_id_but"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/news_title_textSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text="@{clinic.latitude}"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                android:id="@+id/patient_lat_value_id_tv"
+                app:layout_constraintTop_toBottomOf="@+id/patient_select_loc_on_map_id_but"
+                app:layout_constraintStart_toEndOf="@+id/patient_lat_label_id_tv"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/news_title_textSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text="@string/longitude"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/patient_lng_label_id_tv"
+                app:layout_constraintTop_toBottomOf="@+id/patient_lat_label_id_tv"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/news_title_textSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text="@{clinic.longitude}"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintStart_toEndOf="@+id/patient_lat_label_id_tv"
+                android:id="@+id/patient_lng_value_id_tv"
+                app:layout_constraintTop_toBottomOf="@+id/patient_lat_label_id_tv"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/navItemTextSize"
+                android:textColor="@color/light"
+                android:text="@string/calculate"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/main_components_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintEnd_toStartOf="@+id/patient_frag_back_id_but"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/patient_frag_calculate_id_but"
+                android:background="@drawable/button_background"
+                app:layout_constraintTop_toBottomOf="@+id/patient_lng_value_id_tv"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/navItemTextSize"
+                android:textColor="@color/light"
+                android:text="@string/back"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/main_components_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/patient_frag_calculate_id_but"
+                android:id="@+id/patient_frag_back_id_but"
+                android:background="@drawable/button_background"
+                app:layout_constraintTop_toBottomOf="@+id/patient_lng_value_id_tv"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:foregroundGravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/navItemTextSize"
+                android:textColor="@color/colorAccent"
+                android:text="@string/connection_error"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                android:id="@+id/patient_connection_error_id_tv"
+                app:layout_constraintTop_toBottomOf="@+id/patient_frag_calculate_id_but"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

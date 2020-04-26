@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_margin="@dimen/textview_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/textview_padding"
+            android:background="@drawable/rv_item_background_released"
+            android:layout_height="wrap_content">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/navTitleTextSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text=""
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_margin="@dimen/navItemTextSize"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/dualtext_primary_text_tv_id"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mediumTextSize"
+                android:textColor="@color/newsTitleTextColor"
+                android:text=""
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/cairo"
+                android:layout_margin="@dimen/textview_padding"
+                android:id="@+id/dualtext_secondary_text_tv"
+
+                app:layout_constraintTop_toBottomOf="@+id/dualtext_primary_text_tv_id"
+                />
+
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/navItemTextSize"
+                android:textColor="@color/light"
+                android:text="@string/ok"
+                android:gravity="center"
+                android:fontFamily="@font/cairo"
+                android:layout_marginTop="@dimen/main_components_vertical_margin"
+                android:layout_marginBottom="@dimen/textview_padding"
+                android:layout_marginRight="@dimen/textview_padding"
+                android:layout_marginLeft="@dimen/textview_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/dualtext_ok_id_but"
+                android:background="@drawable/button_background"
+                app:layout_constraintTop_toBottomOf="@+id/dualtext_secondary_text_tv"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
